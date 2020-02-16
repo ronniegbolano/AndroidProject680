@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_mainFragment_to_searchBarFragment"
+            app:destination="@id/searchBarFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewStoryFragment"
+            app:destination="@id/viewStoryFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_homeFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchBarFragment"
+            app:destination="@id/searchBarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBarFragment"
+        android:name="com.example.myapplication.SearchBarFragment"
+        android:label="fragment_search_bar"
+        tools:layout="@layout/fragment_search_bar" />
+    <fragment
+        android:id="@+id/viewStoryFragment"
+        android:name="com.example.myapplication.ViewStoryFragment"
+        android:label="fragment_view_story"
+        tools:layout="@layout/fragment_view_story" >
+        <action
+            android:id="@+id/action_viewStoryFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myapplication.ProfileFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_viewStoryFragment"
+            app:destination="@id/viewStoryFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_searchBarFragment"
+            app:destination="@id/searchBarFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_bankOfAmericaWebView"
+            app:destination="@id/bankOfAmericaWebView" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankOfAmericaWebView"
+        android:name="com.example.myapplication.BankOfAmericaWebView"
+        android:label="fragment_bank_of_america_web_view"
+        tools:layout="@layout/fragment_bank_of_america_web_view" />
+</navigation>
