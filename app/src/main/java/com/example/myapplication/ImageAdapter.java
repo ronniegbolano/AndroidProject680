@@ -61,7 +61,7 @@ public class ImageAdapter extends BaseAdapter {
 
         Picasso.get()
                 .load(resId)
-                .resize(400,400)
+                .fit()
                 .into(imageView);
 
         return imageView;

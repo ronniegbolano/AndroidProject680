@@ -6,7 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+
     <!-- TODO: Update blank fragment layout -->
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/original"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        app:lottie_rawRes="@raw/lottietest"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
 
 
     <Button

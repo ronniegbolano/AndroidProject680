@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 
-public class ProfileFragment extends Fragment implements View.OnClickListener{
+public class ProfileFragment extends Fragment{
 
 
     @Override
@@ -45,14 +45,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         textView.setText(Html.fromHtml("This page takes you to <a href=\"http://www.bankofamerica.com\">Bank of America</a>"));
         textView.setMovementMethod(LinkMovementMethod.getInstance());
 
-
+        TextView textView2 = v.findViewById(R.id.bankOfAmerica2);
+        textView2.setText(Html.fromHtml("This page takes you to <a href=\"http://www.bankofamerica.com\">Bank of America</a>"));
+        textView2.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.bankOfAmericaWebView));
 
         return v;
     }
 
-    @Override
-    public void onClick(View view) {
 
-    }
 
 }
